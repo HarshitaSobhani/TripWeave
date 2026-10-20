@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+@import 'leaflet/dist/leaflet.css';
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --color-brand-50: #eef6ff;
+  --color-brand-100: #d9eaff;
+  --color-brand-500: #2f6fed;
+  --color-brand-600: #1f5bd6;
+  --color-brand-700: #1a49ad;
+}
+
+:root { color-scheme: light; }
+body { @apply bg-slate-50 text-slate-900 antialiased; }
+:focus-visible { outline: 3px solid var(--color-brand-500); outline-offset: 2px; }
+
+.btn { @apply inline-flex items-center justify-center gap-1.5 rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-800 shadow-sm hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-50; }
+.btn-primary { @apply border-brand-600 bg-brand-600 text-white hover:bg-brand-700; }
+.btn-danger { @apply border-red-300 text-red-700 hover:bg-red-50; }
+.btn-sm { @apply px-2 py-1 text-xs; }
+.input { @apply w-full rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-sm shadow-sm; }
+.label { @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-slate-600; }
+.card { @apply rounded-lg border border-slate-200 bg-white shadow-sm; }
+
+.tw-marker { display: flex; align-items: center; justify-content: center; border-radius: 9999px; border: 2px solid #fff; color: #fff; font-weight: 700; font-size: 12px; box-shadow: 0 1px 4px rgb(0 0 0 / 0.5); }
+.tw-marker.selected { outline: 3px solid #111827; outline-offset: 2px; }
+.leaflet-container { font-family: inherit; }
